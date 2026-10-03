@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --sidebar: #0f172a;
+  --sidebar-foreground: #f8fafc;
+  --border: #e2e8f0;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+}
+
+html.dark {
+  --background: #0b0f19;
+  --foreground: #f8fafc;
+  --card: #111827;
+  --card-foreground: #f8fafc;
+  --sidebar: #070a12;
+  --sidebar-foreground: #f8fafc;
+  --border: #1f2937;
+  --muted: #1f2937;
+  --muted-foreground: #9ca3af;
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased min-h-screen dark:bg-[#0b0f19] dark:text-slate-100;
+  }
+}
+
+/* Google sign-in leaves a hidden screen-reader announcer far off to the right, which made the
+   whole app scroll sideways after login; keep it off-screen to the left instead */
+#g_a11y_announcement {
+  position: fixed !important;
+  left: -10000px !important;
+  top: 0 !important;
+}
+
+/* Custom smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+/* Global Figma-Accurate Dark Mode Classes Overrides */
+html.dark .bg-white {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/50,
+html.dark .bg-slate-50\/60,
+html.dark .bg-slate-50\/80 {
+  background-color: #0b0f19 !important;
+}
+
+html.dark .bg-slate-100,
+html.dark .bg-slate-100\/50,
+html.dark .bg-slate-100\/80,
+html.dark .bg-slate-100\/90 {
+  background-color: #1f2937 !important;
+}
+
+html.dark .bg-slate-200\/60,
+html.dark .bg-slate-200\/80,
+html.dark .bg-slate-200 {
+  background-color: #374151 !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-200\/80,
+html.dark .border-slate-200\/90,
+html.dark .border-slate-200\/60 {
+  border-color: #1f2937 !important;
+}
+
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-slate-700 {
+  color: #f9fafb !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-slate-500 {
+  color: #9ca3af !important;
+}
+
+html.dark .text-slate-400 {
+  color: #6b7280 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+  border-color: #374151 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+html.dark .shadow-card,
+html.dark .shadow-xl,
+html.dark .shadow-2xl,
+html.dark .shadow-lg,
+html.dark .shadow-md {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1f2937 !important;
+}
+
+html.dark .hover\:bg-slate-50:hover {
+  background-color: #1f2937 !important;
+}
+
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #374151 !important;
+}

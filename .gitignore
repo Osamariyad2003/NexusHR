@@ -1,0 +1,66 @@
+# ---- Dependencies ----
+node_modules/
+.pnp/
+.pnp.js
+
+# ---- Build output ----
+dist/
+dist-ssr/
+build/
+*.local
+
+# ---- Environment & secrets ----
+# .env holds the Stripe publishable key, Google OAuth client ID and tenant config.
+# .env.example is committed as the template — keep it tracked.
+.env
+.env.*
+!.env.example
+
+# ---- Logs ----
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---- Caches ----
+.vite/
+.cache/
+.eslintcache
+.npm/
+*.tsbuildinfo
+
+# ---- Editors & IDEs ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ---- OS noise ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---- Local backups ----
+*.backup-before-*
+*.bak
+*.orig
+*.rar
+*.zip
+
+# ---- QA artefacts ----
+# QA screenshots (~4 MB) live in screenshots/ and are committed as evidence
+# alongside frontend-qa-report.md. To keep them out of git instead, uncomment:
+# screenshots/

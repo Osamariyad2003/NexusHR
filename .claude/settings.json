@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "ClaudeInChromeDomain(localhost:3000)",
+      "Bash(cd \"d:/Web Projects/NexusHR-Backend\" && grep -n \"domain\" src/seed.js | head -5)",
+      "Read(//d/Web Projects/NexusHR-Backend/**)"
+    ]
+  }
+}
